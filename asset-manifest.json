@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/campervans-for-rent/static/css/main.7acaea2f.css",
-    "main.js": "/campervans-for-rent/static/js/main.07d3183d.js",
-    "index.html": "/campervans-for-rent/index.html",
-    "main.7acaea2f.css.map": "/campervans-for-rent/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/campervans-for-rent/static/js/main.07d3183d.js.map"
+    "main.css": "/Campervans-for-rent/static/css/main.e6c13ad2.css",
+    "main.js": "/Campervans-for-rent/static/js/main.07d3183d.js",
+    "index.html": "/Campervans-for-rent/index.html",
+    "main.e6c13ad2.css.map": "/Campervans-for-rent/static/css/main.e6c13ad2.css.map",
+    "main.07d3183d.js.map": "/Campervans-for-rent/static/js/main.07d3183d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
+    "static/css/main.e6c13ad2.css",
     "static/js/main.07d3183d.js"
   ]
 }
