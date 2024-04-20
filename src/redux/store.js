@@ -11,18 +11,20 @@ import {
     REGISTER,
   } from 'redux-persist';
   import storage from 'redux-persist/lib/storage';
+import {favoritesReducer} from './FavouriteSlice'
 
 const persistConfig = {
-  key: 'favorite',
+  key: 'favorites',
   storage,
+  whiteList: ["favorites"],
 };
 
-// const persistedReducer = persistReducer(persistConfig, )
-// Add the favreducer from slice
+const persistedReducer = persistReducer(persistConfig, favoritesReducer)
+
 
 export const store = configureStore({
     reducer:{
-        // favorite:persistedReducer,
+        favorites:persistedReducer,
         root: rootReducer,
     },
     middleware: (getDefaultMiddleware) =>
