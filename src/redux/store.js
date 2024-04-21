@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import{rootReducer} from './slice'
+import {listReducer} from './ListSlice'
 import {
     persistStore,
     persistReducer,
@@ -26,6 +27,7 @@ export const store = configureStore({
     reducer:{
         favorites:persistedReducer,
         root: rootReducer,
+        adverts: listReducer,
     },
     middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
