@@ -5,10 +5,17 @@ import { getAdsThunk } from '../redux/APIThunk';
 import { SelectError, SelectLoading } from '../redux/selectors';
 
 export const ListPage = () => {
+    const [page] = useState(1);
+    const [perPage, setPerPage] = useState(4);
   const dispatch = useDispatch();
+  const handleLoadMore = () => {
+  
+    setPerPage(perPage=>perPage+4)
+    dispatch(getAdsThunk(page, perPage));
+};
   useEffect(() => {
-    dispatch(getAdsThunk());
-  }, [dispatch]);
+    dispatch(getAdsThunk({page, perPage}));
+  }, [dispatch, page,perPage]);
   const isLoading = useSelector(SelectLoading);
   const error = useSelector(SelectError);
   return (
@@ -16,6 +23,7 @@ export const ListPage = () => {
          {isLoading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
       <List />
+      <button onClick={ handleLoadMore}>Load more</button>
     </div>
   );
 };
