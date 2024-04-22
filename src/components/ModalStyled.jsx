@@ -9,15 +9,18 @@ export const DarkOverlay = styled.div`
   background: rgba(17, 18, 19, 0.4);
   ;
   z-index: 1;
+  overflow:auto;
+  display:flex;
 `;
 
 export const StyledModal = styled.div`
-position:absolute;
-top: 40px;
+position:fixed;
+top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+margin:0 auto;
+  transform: translate(-50%, -50%);
 width: 982px;
-ovrflow:auto;
+
 padding: 40px;
 border-radius: 20px;
 z-index: 100;

@@ -6,7 +6,7 @@ import {
   SelectFavorites,
 } from '../redux/selectors';
 import { addToFavorites, removeFromFavorites } from '../redux/FavouriteSlice';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { Modal } from './Modal';
 import { DarkOverlay } from './ModalStyled';
 

@@ -19,7 +19,7 @@ export const Modal = ({isOpen, onClose, advert})=>{
             <div>
               <p>{advert.description}</p>
             </div>
-            <div><p>Features</p> <p>Reviews</p></div>
+            <div><button>Features</button> <button>Reviews</button></div>
             </div>
             <div>
                 <div></div>
