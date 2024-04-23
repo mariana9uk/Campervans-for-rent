@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { getAdsThunk } from '../redux/APIThunk';
 import { SelectError, SelectLoading } from '../redux/selectors';
+import { StyledMainContainer } from './StyledPages';
 
 export const ListPage = () => {
     const [page] = useState(1);
@@ -16,14 +17,13 @@ export const ListPage = () => {
   useEffect(() => {
     dispatch(getAdsThunk({page, perPage}));
   }, [dispatch, page,perPage]);
-  const isLoading = useSelector(SelectLoading);
+
   const error = useSelector(SelectError);
   return (
-    <div>
-         {isLoading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
+    <StyledMainContainer>
+               {error && <p>Error: {error}</p>}
       <List />
       <button onClick={ handleLoadMore}>Load more</button>
-    </div>
+    </StyledMainContainer>
   );
 };

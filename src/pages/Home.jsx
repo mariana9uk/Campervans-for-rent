@@ -3,8 +3,7 @@ export const HomePage=()=>{
 
     return(
         <div>
-            Homepage
-            <NavLink to="/catalog">Go To Adverts</NavLink>
+                      <NavLink to="/catalog">Go To Adverts</NavLink>
         </div>
     )
 }

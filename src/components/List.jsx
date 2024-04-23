@@ -9,6 +9,7 @@ import { addToFavorites, removeFromFavorites } from '../redux/FavouriteSlice';
 import { useState} from 'react';
 import { Modal } from './Modal';
 import { DarkOverlay } from './ModalStyled';
+import { ButtonStyled, ListCardContainer, ListContainer } from './StylesForList';
 
 export const List = () => {
   const isLoading = useSelector(SelectLoading);
@@ -41,11 +42,13 @@ export const List = () => {
         }
       };
       return (
-        <li key={advert.id}>
+        <ListCardContainer key={advert.id}>
           <div>
             <div>{advert.galery}</div>
             <div>
+            <h1>
             {advert.name}
+            </h1>
             <div>
               €{advert.price}
               <button onClick={handleToggleFavorite}>
@@ -59,7 +62,7 @@ export const List = () => {
             </div>
             <div>
             <div>
-              Star {advert.raiting}({advert.reviews.length} Reviews)
+            ⭐{advert.raiting}({advert.reviews.length} Reviews)
             
             </div>
             <div>  {advert.location}</div>
@@ -75,16 +78,17 @@ export const List = () => {
               <div>{advert.details.beds} beds</div>
               <div>AC</div>
             </div>
-            <button onClick={() => handleOpenModal(advert)}>Show More</button>
+            <ButtonStyled onClick={() => handleOpenModal(advert)}>Show More</ButtonStyled>
           </div>
-        </li>
+      
+        </ListCardContainer>
       );
     });
   };
 
   return (
    
-    <div>
+    <ListContainer>
          {isModalOpen && <DarkOverlay onClick={closeModal} />}
       <ul>
         {isLoading && <p>Loading...</p>}
@@ -93,6 +97,6 @@ export const List = () => {
       </ul>
 
       <Modal isOpen={isModalOpen} advert={selectedAd} onClose={closeModal} />
-    </div>
+    </ListContainer>
   );
 };

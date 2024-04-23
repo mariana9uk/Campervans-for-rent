@@ -6,11 +6,13 @@ margin-top: 5px;
 padding: 5px;
 `
 export const StyledButton = styled.button`
-padding: 5px;
-width: 80px;
-display: flex;
-align-items: center;
-justify-content: center;
+width: 160px;
+height: 56px;
+padding: 16px 40px 16px 40px;
+border-radius: 200px;
+opacity: 0px;
+background: #E44848;
+color:#FFFFFF;
 `
 
 export const ErrorMessageStyled = styled.div`

@@ -27,3 +27,13 @@ z-index: 100;
 box-shadow: 0px 4px 8px 0px #407BFF33;
 background-color: #fff;
 `
+export const ToggleSectionsButton = styled.button`
+cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 24px;
+  margin-right: 20px;
+  color: black;
+
+ border-bottom: ${(props) => (props.isActive ? '5px #E44848 solid' : 'none')};
+`

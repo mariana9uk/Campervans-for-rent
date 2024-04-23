@@ -3,6 +3,7 @@ import {SharedLayout} from './SharedLayout'
 import{HomePage} from '../pages/Home'
 import{ListPage} from '../pages/ListPage'
 import{FavoritesPage} from '../pages/FavoritesPage'
+
 export const App = () => {
   return (
     <Routes>
@@ -13,6 +14,8 @@ export const App = () => {
       <Route path="favorites" element={<FavoritesPage/>}/>
    <Route path="*" element={<HomePage />} />
     </Route>
+    
     </Routes>
+  
   );
 };
